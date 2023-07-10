@@ -1,6 +1,7 @@
 'use client'
 
 import { useChat } from 'ai/react'
+import parse from 'html-react-parser';
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
@@ -11,7 +12,7 @@ export default function Chat() {
         ? messages.map(m => (
             <div key={m.id} className="whitespace-pre-wrap">
               {m.role === 'user' ? 'User: ' : 'AI: '}
-              {m.content}
+              {parse(m.content)}
             </div>
           ))
         : null}
