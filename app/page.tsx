@@ -19,7 +19,7 @@ const teams = [
   { id: 2, name: 'GitHub', href: '#', initial: 'G', current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
