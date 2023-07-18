@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Assistant } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const assistant = Assistant({ weight:"variable", subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-full bg-white">
+      <body className={assistant.className + " h-full"}>{children}</body>
     </html>
   )
 }

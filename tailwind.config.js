@@ -11,7 +11,12 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
-      }
+      },
+      height: (theme) => ({
+        "screen-1/2": "50vh",
+        "screen-3/4": "75vh",
+        "screen-5/8": "calc(calc(100vh / 9) * 6)",
+      }),
     }
   },
   plugins: []
