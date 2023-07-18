@@ -6,6 +6,7 @@ import parse from 'html-react-parser';
 import { SparklesIcon, PaperAirplaneIcon, UserIcon } from '@heroicons/react/24/solid'
 
 import { InitMessage } from '@/components/InitMessage';
+import { AnyARecord } from 'dns';
 
 const icon = {
   'user': {
@@ -24,16 +25,15 @@ const icon = {
     icon: SparklesIcon,
     iconBackground: 'bg-green-500',
   },
-
 }
+
+type IconType = keyof typeof icon
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-
-
-function testIcon(type: string) {
+function testIcon(type: IconType) {
   const Icon = icon[type].icon
   return <Icon className="h-5 w-5 text-white" aria-hidden="true"/>
 }
