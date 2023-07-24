@@ -15,24 +15,28 @@ import {
       description: 'Alfonso Hernandez\'s SWE Resume',
       icon: CommandLineIcon,
       background: 'bg-green-400',
+      href: '/alfonso_hernandez_resume_202307.pdf',
     },
     {
       title: 'Download my Cover Letter',
       description: 'This is my primary cover letter, similar to my resume but more personal.',
       icon: NewspaperIcon,
       background: 'bg-indigo-400',
+      href: '/alfonso_hernandez_resume_202307.pdf',
     },
     {
       title: 'Visit my Linkedin',
       description: 'Full of experience and things — good to connect.',
       icon: CursorArrowRippleIcon,
       background: 'bg-sky-900',
+      href: 'https://www.linkedin.com/in/alfonsohernandezu/',
     },
     {
       title: 'Visit my GitHub',
       description: 'Get a birds-eye-view of my repositories.',
       icon: CubeTransparentIcon,
       background: 'bg-neutral-900',
+      href: 'https://github.com/aheruz',
     },
 ]
 
@@ -87,7 +91,7 @@ export function InitMessage() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-gray-900">
-                  <a href="#" className="focus:outline-none">
+                  <a href={item.href} target='_blank' className="focus:outline-none">
                     <span className="absolute inset-0" aria-hidden="true" />
                     <span>{item.title}</span>
                     <span aria-hidden="true"> &rarr;</span>

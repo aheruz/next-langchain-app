@@ -15,8 +15,8 @@ const navigation = [
   { name: 'Resume chatter', href: '/', icon: ChatBubbleLeftRightIcon, current: true },
 ]
 const teams = [
-  { id: 1, name: 'LinkedIn', href: '#', initial: 'L', current: false },
-  { id: 2, name: 'GitHub', href: '#', initial: 'G', current: false },
+  { id: 1, name: 'LinkedIn', href: 'https://www.linkedin.com/in/alfonsohernandezu/', initial: 'L', current: false },
+  { id: 2, name: 'GitHub', href: 'https://github.com/aheruz', initial: 'G', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -80,6 +80,7 @@ export default function Page() {
                               <li key={item.name}>
                                 <a
                                   href={item.href}
+                                  target="_blank"
                                   className={classNames(
                                     item.current
                                       ? 'bg-gray-800 text-white'
@@ -101,6 +102,7 @@ export default function Page() {
                               <li key={team.name}>
                                 <a
                                   href={team.href}
+                                  target="_blank"
                                   className={classNames(
                                     team.current
                                       ? 'bg-gray-800 text-white'
@@ -138,6 +140,7 @@ export default function Page() {
                       <li key={item.name}>
                         <a
                           href={item.href}
+                          target="_blank"
                           className={classNames(
                             item.current
                               ? 'bg-gray-800 text-white'
@@ -163,7 +166,7 @@ export default function Page() {
                         </div>
                       </div>
                       <div className="ml-4 flex-shrink-0">
-                        <a href="#" className="font-medium text-indigo-400 hover:text-indigo-300">
+                        <a href="/alfonso_hernandez_resume_202307.pdf" target="_blank" className="font-medium text-indigo-400 hover:text-indigo-300">
                           <ArrowDownTrayIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                         </a>
                       </div>
@@ -177,7 +180,7 @@ export default function Page() {
                         </div>
                       </div>
                       <div className="ml-4 flex-shrink-0">
-                        <a href="#" className="font-medium text-indigo-400 hover:text-indigo-300">
+                        <a href="/alfonso_hernandez_resume_202307.pdf" target="_blank" className="font-medium text-indigo-400 hover:text-indigo-300">
                           <ArrowDownTrayIcon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                         </a>
                       </div>
@@ -191,6 +194,7 @@ export default function Page() {
                       <li key={team.name}>
                         <a
                           href={team.href}
+                          target="_blank"
                           className={classNames(
                             team.current
                               ? 'bg-gray-800 text-white'
@@ -209,7 +213,8 @@ export default function Page() {
                 </li>
                 <li className="-mx-6 mt-auto">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/alfonsohernandezu/"
+                    target="_blank"
                     className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-gray-800"
                   >
                     <img
@@ -232,7 +237,7 @@ export default function Page() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
           <div className="flex-1 text-sm font-semibold leading-6 text-white">Alfonso Hernandez</div>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/alfonsohernandezu/" target="_blank">
             <span className="sr-only">Your profile</span>
             <img
               className="h-8 w-8 rounded-full bg-gray-800"
