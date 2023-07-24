@@ -110,7 +110,7 @@ export function Chat() {
             onChange={handleInputChange}/>
             <button
             type="submit"
-            className="absolute right-1 mt-[6.5px] mr-[3px] rounded-lg bg-white px-2 pr-1.5 py-1.5 text-sm font-semibold bg-green-600 text-white shadow-sm ring-0 hover:bg-green-700"
+            className="absolute right-1 mt-[6.5px] mr-[3px] rounded-lg bg-green-600 px-2 pr-1.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-0 hover:bg-green-700"
             >
               <PaperAirplaneIcon className="h-6 w-6 ml-[2px] mt-[0.25px] inline" aria-hidden="true"/>
             </button>
