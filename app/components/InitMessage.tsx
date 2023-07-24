@@ -1,4 +1,7 @@
-import { SparklesIcon } from '@heroicons/react/24/solid'
+import {
+  SparklesIcon,
+  CheckCircleIcon,
+  } from '@heroicons/react/24/solid'
 import {
     CommandLineIcon,
     NewspaperIcon,
@@ -45,11 +48,28 @@ export function InitMessage() {
                     <div className='flex justify-center'>
                         <SparklesIcon className="h-5 w-5 mt-1" aria-hidden="true"/>
                         <h1 className="text-4xl font-black tracking-tight text-black sm:text-6xl">
-                            Resume Chatter
+                          Resume Chatter
                         </h1>
                     </div>
+                    <>
+                      <ul role="list" className="space-y-6 mx-auto w-3/4">
+                        <li key='hi' className="relative flex gap-x-4">
+                          <>
+                            <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
+                            <CheckCircleIcon className="h-5 w-5 text-cyan-500" aria-hidden="true" />
+                            </div>
+                            <p className="text-left flex-auto py-0.5 text-xs leading-5 text-gray-500">
+                              <span className="font-medium text-gray-900">Alfonso Hernández</span> SWE with +7 years of experience.
+                            </p>
+                            <time dateTime="date" className="flex-none py-0.5 text-xs leading-5 text-gray-500">
+                              <span className="font-medium text-gray-900">Jul, 2023</span>
+                            </time>
+                          </>
+                        </li>
+                      </ul>
+                    </>
                     <p className="max-w-xl mt-6 text-lg leading-8 text-gray-800">
-                    This chat has my resume embedded. You can download it or visit my social media profiles displayed in the sidebar.
+                      I'm a Software Engineer, and my resume is embedded in this chat!
                     </p>
                 </div>
             </div>

@@ -79,15 +79,15 @@ export function Chat() {
         }
         <form onSubmit={handleSubmit} className="fixed w-[98%] ml-[1%] left-0 sm:ml-[-2%] sm:left-auto sm:w-full max-w-3xl bottom-0">
             <input
-            className="text-md text-gray-500 w-full border border-gray-300 rounded mb-8 shadow-xl p-2.5"
+            className="text-md text-gray-500 w-full border border-gray-300 rounded-xl mb-8 shadow-xl p-3 pl-5 focus:outline-none"
             value={input}
-            placeholder="Say something..."
+            placeholder="Yep, I'm listening..."
             onChange={handleInputChange}/>
             <button
             type="submit"
-            className="absolute right-2 mt-[0.415rem] mr-0.5 rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+            className="absolute right-1 mt-[6.5px] mr-[3px] rounded-lg bg-white px-2 pr-1.5 py-1.5 text-sm font-semibold bg-green-600 text-white shadow-sm ring-0 hover:bg-green-700"
             >
-            Send <PaperAirplaneIcon className="h-3 w-3 -mt-0.5 inline" aria-hidden="true"/>
+              <PaperAirplaneIcon className="h-6 w-6 ml-[2px] mt-[0.25px] inline" aria-hidden="true"/>
             </button>
         </form>
       </div>
