@@ -1,6 +1,7 @@
 'use client'
 
 import { useChat } from 'ai/react'
+import { useEffect, useRef } from 'react'
 import parse from 'html-react-parser';
 
 import {
@@ -46,13 +47,24 @@ function testIcon(type: IconType) {
 export function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
 
+  const messagesEndRef = useRef<null | HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView()
+
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <div className="relative h-full flow-root">
+      <div className="relative flow-root">
 
         { (messages.length > 0) ? (
           <>
-            <ul role="list" className="space-y-6">
+            <ul role="list" className="space-y-6 pb-12 will-change-scroll scroll-smooth">
             {messages.map((m, id) => (
               <li key={m.id} className="relative flex gap-x-4">
                 <div
@@ -80,7 +92,7 @@ export function Chat() {
                     <div className="flex-auto w-auto -mt-1.5 rounded-lg p-2 ring-1 ring-inset ring-gray-100">
                       <div className="flex justify-between gap-x-4">
                       </div>
-                      <p className="text-sm leading-5 text-gray-500">{parse(m.content)}{' '}</p>
+                      <p ref={messagesEndRef} className="text-sm leading-5 text-gray-500">{parse(m.content)}{' '}</p>
                     </div>
                   </>
               </li>
