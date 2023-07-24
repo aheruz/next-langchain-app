@@ -73,7 +73,7 @@ export function InitMessage() {
                       </ul>
                     </>
                     <p className="text-sm max-w-xl mt-6 leading-relaxed text-gray-800 sm:text-lg">
-                      I'm a Software Engineer, and my resume is embedded in this chat!
+                      I'm a Software Engineer with expertise in PHP, Python and LLMs. My resume is embedded in this chat!
                     </p>
                 </div>
             </div>
