@@ -42,7 +42,7 @@ function classNames(...classes: string[]) {
 
 export function InitMessage() {
     return (
-        <div className="h-screen-5/8 grid gap-y-1 grid-cols-1 content-end">
+        <div className="sm:h-screen-5/8 grid gap-y-1 grid-cols-1 content-end">
             <div className="mx-auto max-w-7xl">
                 <div className="mx-auto max-w-2xl text-center">
                     <div className='flex justify-center'>
@@ -52,7 +52,7 @@ export function InitMessage() {
                         </h1>
                     </div>
                     <>
-                      <ul role="list" className="space-y-6 mx-auto w-3/4">
+                      <ul role="list" className="space-y-6 mx-auto w-11/12 sm:w-3/4">
                         <li key='hi' className="relative flex gap-x-4">
                           <>
                             <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
@@ -68,7 +68,7 @@ export function InitMessage() {
                         </li>
                       </ul>
                     </>
-                    <p className="max-w-xl mt-6 text-lg leading-8 text-gray-800">
+                    <p className="text-sm max-w-xl mt-6 leading-relaxed text-gray-800 sm:text-lg">
                       I'm a Software Engineer, and my resume is embedded in this chat!
                     </p>
                 </div>
