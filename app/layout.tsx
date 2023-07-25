@@ -1,6 +1,5 @@
 import './globals.css'
 import { Assistant } from 'next/font/google'
-import { GoogleTagManager } from '../src/tracking'
 import { Analytics } from '@vercel/analytics/react';
 
 const assistant = Assistant({ weight:"variable", subsets: ['latin'] })
@@ -17,7 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full bg-white">
-      <GoogleTagManager />
       <body className={assistant.className + " h-full"}>{children}</body>
       <Analytics />
     </html>
