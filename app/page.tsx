@@ -250,10 +250,10 @@ export default function Page() {
                   <a
                     href="https://www.linkedin.com/in/alfonsohernandezu/"
                     target="_blank"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-tight text-white hover:bg-zinc-800"
+                    className="flex items-center gap-x-3 px-6 py-3 text-sm font-semibold leading-tight text-white hover:bg-zinc-800"
                   >
                     <img
-                      className="h-8 w-8 rounded-full bg-zinc-800"
+                      className="h-10 w-10 rounded-full bg-zinc-800"
                       src="https://www.gravatar.com/avatar/319e81817bf5fedae4cd74d4b370a70217e3fe19f19d5eaff34f8dd71524d014"
                       alt=""
                     />
