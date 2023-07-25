@@ -1,6 +1,6 @@
 import {
   SparklesIcon,
-  CheckCircleIcon,
+  CheckBadgeIcon,
   } from '@heroicons/react/24/solid'
 import {
     CommandLineIcon,
@@ -56,24 +56,24 @@ export function InitMessage() {
                         </h1>
                     </div>
                     <>
-                      <ul role="list" className="space-y-6 mx-auto w-11/12 sm:w-3/4">
-                        <li key='hi' className="relative flex gap-x-4">
+                      <ul role="list" className="space-y-6 mx-auto w-11/12 ">
+                        <li key='hi' className="relative flex gap-x-2">
                           <>
                             <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
-                            <CheckCircleIcon className="h-5 w-5 text-cyan-500" aria-hidden="true" />
+                            <CheckBadgeIcon className="h-5 w-5 text-cyan-500" aria-hidden="true" />
                             </div>
                             <p className="text-left flex-auto py-0.5 text-xs leading-5 text-gray-500">
-                              <span className="font-medium text-gray-900">Alfonso Hernández</span> SWE with +7 years of experience.
+                              <span className="font-medium text-gray-900">Alfonso Hernández</span> SWE with +7 experience years.
                             </p>
                             <time dateTime="date" className="flex-none py-0.5 text-xs leading-5 text-gray-500">
-                              <span className="font-medium text-gray-900">Jul, 2023</span>
+                              <span className="font-medium text-gray-900">July, 2023</span>
                             </time>
                           </>
                         </li>
                       </ul>
                     </>
-                    <p className="text-sm max-w-xl mt-6 leading-relaxed text-gray-800 sm:text-lg">
-                      I'm a Software Engineer with expertise in PHP, Python and LLMs. My resume is embedded in this chat!
+                    <p className="text-sm max-w-xl mt-6 leading-relaxed text-gray-800">
+                      I'm a Software Engineer with expertise in PHP, Python and LLMs.<br/>My resume is embedded in this chat!
                     </p>
                 </div>
             </div>

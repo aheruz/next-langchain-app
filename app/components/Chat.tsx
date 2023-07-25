@@ -8,11 +8,9 @@ import {
   SparklesIcon,
   PaperAirplaneIcon,
   UserIcon,
-  CheckCircleIcon,
 } from '@heroicons/react/24/solid'
 
 import { InitMessage } from '@/components/InitMessage';
-import { AnyARecord } from 'dns';
 
 const icon = {
   'user': {
@@ -59,12 +57,12 @@ export function Chat() {
   }, [messages]);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto sm:max-w-3xl px-0 sm:px-6 lg:px-8">
       <div className="relative flow-root">
 
         { (messages.length > 0) ? (
           <>
-            <ul role="list" className="space-y-6 pb-12 will-change-scroll scroll-smooth">
+            <ul role="list" className="space-y-6 pb-14 will-change-scroll scroll-smooth">
             {messages.map((m, id) => (
               <li key={m.id} className="relative flex gap-x-4">
                 <div
@@ -102,18 +100,19 @@ export function Chat() {
           )
             : ( <InitMessage />)
         }
-        <form onSubmit={handleSubmit} className="fixed w-[98%] ml-[1%] left-0 sm:ml-[-2%] sm:left-auto sm:w-full max-w-3xl bottom-0">
+        <form onSubmit={handleSubmit} className="backdrop-blur-sm bg-white/30 fixed w-[98%] sm:w-[91%] ml-[1%] left-0 sm:ml-[-2%] sm:left-auto md:w-[91.5%] lg:w-[67.5%] xl:w-full max-w-3xl bottom-0">
             <input
-            className="text-md text-gray-500 w-full border border-gray-300 rounded-xl mb-8 shadow-xl p-3 pl-5 focus:outline-none"
+            className="text-md text-gray-500 bg-gray-100 w-full rounded-xl mb-2 sm:mb-3 shadow-xl p-2 pl-4 sm:p-3 sm:pl-5 focus:outline-none"
             value={input}
             placeholder="Yep, I'm listening..."
             onChange={handleInputChange}/>
             <button
             type="submit"
-            className="absolute right-1 mt-[6.5px] mr-[3px] rounded-lg bg-green-600 px-2 pr-1.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-0 hover:bg-green-700"
+            className="absolute right-1 mt-1 sm:mt-[6.5px] sm:mr-[3px] rounded-lg bg-green-600 px-2 pr-1.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-0 hover:bg-green-700"
             >
-              <PaperAirplaneIcon className="h-6 w-6 ml-[2px] mt-[0.25px] inline" aria-hidden="true"/>
+              <PaperAirplaneIcon className="h-5 w-5 sm:h-6 sm:w-6 sm:ml-[2px] sm:mt-[0.25px] inline" aria-hidden="true"/>
             </button>
+            <p className="text-xs text-gray-500 text-center mb-2 sm:mb-3 mr-2 sm:mr-4">Alfonso Hernandez's resume chatbot. Review the <span className="font-semibold"><a href="https://github.com/aheruz/resume-langchain-app" target="_blank" className="underline">GitHub repository</a></span>. Updated by <span className="font-semibold">July 2023</span>.</p>
         </form>
       </div>
     </div>
