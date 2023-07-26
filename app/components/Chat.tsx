@@ -43,7 +43,11 @@ function testIcon(type: IconType) {
 }
 
 export function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat()
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    api: 'api/conversation'
+  })
+
+  console.log(messages)
 
   const messagesEndRef = useRef<null | HTMLInputElement>(null);
 
@@ -87,10 +91,23 @@ export function Chat() {
                         className="relative h-6 w-6 flex-none rounded-full bg-gray-50"
                       />
                     )}
-                    <div className="flex-auto w-auto -mt-1.5 rounded-lg p-2 ring-1 ring-inset ring-gray-100">
-                      <div className="flex justify-between gap-x-4">
+                    <div className="flex-auto w-auto -mt-1.5">
+                      <div className="rounded-lg p-2 ring-1 ring-inset ring-gray-100" >       
+                        <div className="flex justify-between gap-x-4">
+                        </div>
+                        <p ref={messagesEndRef} className="text-sm leading-5 text-gray-500">{parse(m.content)}{' '}</p>
                       </div>
-                      <p ref={messagesEndRef} className="text-sm leading-5 text-gray-500">{parse(m.content)}{' '}</p>
+                      { m.role === 'assistant' && m.content.includes('experience') ? (
+                        <button
+                          type="button"
+                          className="flex mt-1 rounded-lg bg-blue-600 px-1.5 py-1 text-xs font-light text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        >
+                          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" className="h-4 w-4 inline mr-1" aria-hidden="true"/>
+                          Review Alfonso's LinkedIn
+                        </button>
+                      ) : (
+                        <></>
+                      )}  
                     </div>
                   </>
               </li>
