@@ -98,13 +98,14 @@ export function Chat() {
                         <p ref={messagesEndRef} className="text-sm leading-5 text-gray-500">{parse(m.content)}{' '}</p>
                       </div>
                       { m.role === 'assistant' && m.content.includes('experience') ? (
-                        <button
+                        <a
+                          href="linkedin.com/in/alfonsohernandez"
                           type="button"
-                          className="flex mt-1 rounded-lg bg-blue-600 px-1.5 py-1 text-xs font-light text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                          className="mt-1 rounded-lg bg-blue-600 px-1.5 py-1 text-xs font-light text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                         >
-                          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" className="h-4 w-4 inline mr-1" aria-hidden="true"/>
+                          <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" className="-mt-0.5 h-4 w-4 inline mr-1" aria-hidden="true"/>
                           Review Alfonso's LinkedIn
-                        </button>
+                        </a>
                       ) : (
                         <></>
                       )}  
